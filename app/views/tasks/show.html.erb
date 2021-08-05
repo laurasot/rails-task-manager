@@ -1,0 +1,11 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<li><%= link_to "menu principal", tasks_path %></li>
+
+<%= link_to task_path(@task), method: :delete, data: { confirm: 'Are you sure?'} do %>
+    Delete <%= @task.title %>
+<% end %>
+
+<%= link_to edit_task_path(@task) do %>
+    Editar
+<% end %>
